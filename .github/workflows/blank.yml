@@ -3,9 +3,9 @@ name: Run Jest Tests
 on:
   workflow_dispatch:
   push:
-    branches: [ main, joel ]
+    branches: [ joel ]
   pull_request:
-    branches: [ main, joel ]
+    branches: [ joel ]
 
 jobs:
   test:
