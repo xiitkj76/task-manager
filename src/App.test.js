@@ -20,4 +20,4 @@ test('renders empty task message', () => {
   render(<App />);
   const message = screen.getByText(/No tasks available/i);
   expect(message).toBeInTheDocument();
-});
+}); 
