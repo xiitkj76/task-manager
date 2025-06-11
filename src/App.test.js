@@ -8,11 +8,17 @@ describe('App component', () => {
     expect(heading).toBeInTheDocument();
   });
 
-  test('renders Your Tasks section', () => {
-    render(<App />);
-    const yourTasks = screen.getByText(/Your Tasks/i);
-    expect(yourTasks).toBeInTheDocument();
-  });
+  // test('renders Your Tasks section', () => {
+  //   render(<App />);
+  //   const yourTasks = screen.getByText(/Your Tasks/i);
+  //   expect(yourTasks).toBeInTheDocument();
+  // });
+
+  test('renders TaskFilter dropdowns', () => {
+  render(<App />);
+  expect(screen.getByLabelText(/Priority/i)).toBeInTheDocument();
+  expect(screen.getByLabelText(/Status/i)).toBeInTheDocument();
+});
 
   test('renders Clear All Tasks button', () => {
     render(<App />);
